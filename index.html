@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элементы форм</title>
+</head>
+
+<body>
+    <h1>Тест зі світової історії</h1>
+    <form id="my_form"
+        onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+        <fieldset>
+            <legend>Авторизуйтесь</legend>
+            <label for="name">Ваше ім’я</label>
+            <input type="text" name="authorization_login" id="name"><br>
+            <br>
+            <label for="email">Ваш email</label>
+            <input type="email" name="authorization_email" id="email"><br>
+            <br>
+            <label for="password">Ваш пароль</label>
+            <input type="password" name="authorization_password" id="password"><br>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Блок 1. З поданих варіантів оберіть правильну відповідь</legend>
+            <label for="question_1">Розпад Західної Римської імперії відбувся у</label><br>
+            <select name="question" id="question_1">
+                <option value="476 р">476 р</option>
+                <option value="881 р">881 р</option>
+                <option value="1453 р">1453 р</option>
+                <option value="501 р">501 р</option>
+                <option hidden disabled selected>Oберіть</option>
+            </select>
+            <br>
+            <label for="question_2">В яком році християнство стало офіційною релігією Римської імперії?</label><br>
+            <select name="question" id="question_2">
+                <option value="450 р">450 р</option>
+                <option value="41 р">41 р</option>
+                <option value="506 р">380 р</option>
+                <option value="506 р">506 р</option>
+                <option hidden disabled selected>Oберіть</option>
+            </select>
+            <br>
+            <label for="question_3">В якому році був коронований Карл Великий титулом імператора?</label><br>
+            <select name="question" id="question_3">
+                <option value="774 р">774 р</option>
+                <option value="810 р">810 р</option>
+                <option value="800 р">800 р</option>
+                <option value="799 р">799 р</option>
+                <option hidden disabled selected>Oберіть</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Блок 2.Одна правильна відповідь:</legend>
+            <br>
+            <p>Пелопоннеська війна</p>
+            <input type="radio" name="answer" id="answer_1">
+            <label for="answer_1">529-517 р до н.е</label>
+            <br>
+            <input type="radio" name="answer" id="answer_2">
+            <label for="answer_2">431-404 р до н.е</label>
+            <br>
+            <input type="radio" name="answer" id="answer_3">
+            <label for="answer_3">100-98 р до н.е</label>
+            <br>
+            <input type="radio" name="answer" id="answer_4">
+            <label for="answer_4">52 р до н.е</label>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Блок 3. Оберіть ієрархію характерну для середньовічної Європи</legend>
+            <select>
+                <optgroup label="Соціальна">
+                    <option value="Рабовласник-Вільна людина-Раб">Рабовласник-Вільна людина-Раб</option>
+                </optgroup>
+                <optgroup label="Світська">
+                    <option value="Король-Васали-Папа">Король-Васали-Папа</option>
+                </optgroup>
+                <optgroup label="Церковна">
+                    <option value="Папа-Король-Васали">Папа-Король-Васали</option>
+                </optgroup>
+            </select>
+            <br>
+        </fieldset>
+        <fieldset>
+            <p>Блок 4</p>
+            <label for="text">Назвіть причини Хрестових походів та опишіть один з них (на ваш вибір)</label>
+            <br>
+            <textarea name="text_answer" id="text" cols="70" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="date">Дата проходження тесту</label>
+            <input type="date" name="date" id="date">
+        </fieldset>
+        <br>
+        <input type="checkbox" name="conditions" id="agree">
+        <label for="agree">Я даю свою згоду на обробку результатів тесту</label>
+        <br>
+        <input type="submit" value="Відправити">
+
+    </form>
+</body>
+
+</html>
